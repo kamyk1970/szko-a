@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #waz{
+            background-color: goldenrod;
+            border-radius: 100%;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="waz"></div>
+    <script>
+        const waz = document.querySelector('#waz')
+        let x = 0
+        let y = 0
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "s"){
+                y += 5
+                waz.style.top = y + "px"
+            }
+        })
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "d"){
+                x += 5
+                waz.style.left = x + "px"
+            }
+        })
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "a"){
+                x -= 5
+                waz.style.left = x + "px"
+            }
+        })
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "w"){
+                y -= 5
+                waz.style.top = y + "px"
+            }
+        })
+        //double move
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "s" && e.key.toLowerCase() == "d"){
+                y += 5
+                x += 5
+                waz.style.top = y + "px"
+                waz.style.left = x + "px"
+            }
+        })
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "a" && e.key.toLowerCase() == "w"){
+                y -= 5
+                x -= 5
+                waz.style.top = y + "px"
+                waz.style.left = x + "px"
+            }
+        })
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "a" && e.key.toLowerCase() == "s"){
+                y += 5
+                x -= 5
+                waz.style.top = y + "px"
+                waz.style.left = x + "px"
+            }
+        })
+        document.addEventListener("keydown", e => {
+            if(e.key.toLowerCase() == "w" && e.key.toLowerCase() == "d"){
+                y -= 5
+                x += 5
+                waz.style.top = y + "px"
+                waz.style.left = x + "px"
+            }
+        })
+    </script>
+</body>
+</html>
