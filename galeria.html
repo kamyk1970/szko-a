@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 10vh;
+            background-color: lightblue;
+        }
+        nav{
+            width: 20%;
+            height: 70vh;
+            float: left;
+            background-color: lightcoral;
+            justify-items: center;
+        }
+        main{
+            width: 80%;
+            height: 70vh;
+            background-color: lightgreen;
+            overflow: auto;
+        }
+        footer{
+            height: 10vh;
+            background-color: lightsalmon;
+        }
+        div{           
+            border: solid lightpink;
+        }
+        img{
+            margin: 10px;
+        }
+        button{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <header>Witaj w galerii!</header>
+    <nav>
+        <div>
+            <a href="menu.html">Home</a>
+        </div>
+        <div>
+            Galeria
+        </div>
+    </nav>
+    <main id="main"><button id="btn" type="submit">Dodaj</button></main>
+    <footer>Kokos</footer>
+    <script>
+        const btn = document.querySelector("#btn").addEventListener("click", e => {
+            e.defaultPrevented
+            let img = document.createElement("img")
+            img.src = "kok.jpg"
+            document.querySelector("#main").appendChild(img)
+        })
+    </script>
+</body>
+</html>

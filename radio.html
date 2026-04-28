@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="radio" name="plec" id="M" value="men"/> Men
+        <input type="radio" name="plec" id="W" value="women"/> Women
+        <button id="btn" type="submit">Klicku</button>
+    </form>
+    <script>
+        document.getElementById("btn").addEventListener("click", e=>{
+            e.preventDefault()
+
+
+            const radioM = document.querySelector("#M")
+            const radioW = document.querySelector("#W")
+
+            if(radioM.checked){
+                console.log(radioM.value)
+            } else{
+                console.log(radioW.value)
+            }
+        })
+    </script>
+</body>
+</html>
